@@ -15,6 +15,8 @@
 Route::get('api/:version/articleList','api/:version.article/articleList');
 Route::get('api/:version/articleDetail','api/:version.article/articleDetail');
 Route::post('api/:version/updateArticle','api/:version.article/addOrUpdateArticle');
+Route::post('api/:version/delArticleOne','api/:version.article/delArticleOne');
+Route::post('api/:version/delArticleMany','api/:version.article/delArticleMany');
 
 
 

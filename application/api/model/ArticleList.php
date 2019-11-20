@@ -9,28 +9,35 @@ use think\Model;
 class ArticleList extends Model
 {
     protected $autoWriteTimestamp = 'datetime';
-    public function getall() {
 
-    }
-    public function getOneById($id) {
 
-    }
-    public function addOne() {
-        $data = input('post.');
-        $res = $this-> save($data);
-        return $res;
-//        if($res) {
-//            return false;
-//        }else {
-//            return $this->id;
-//        }
-    }
-    public function delOne() {
-
+    public function setAuthorImgAttr($value) {
+        return $value?$value:'/static/img/user-default.jpg';
     }
 
-    public function updateOne() {
-
+    public function setDesImgAttr($value) {
+        return $value?$value:'/static/img/des-default.jpg';
     }
 
+    public function setIsDelAttr($value) {
+        return $value?$value:'false';
+    }
+
+    public function setTagAttr($value)
+    {
+        return implode(',',$value);
+    }
+
+
+        //    取值操作
+    public function getTagAttr($value)
+    {
+        return explode(',',$value);
+    }
+    public function getDesImgAttr($value) {
+        return config('setting.host').$value;
+    }
+    public function getAuthorImgAttr($value) {
+        return config('setting.host').$value;
+    }
 }
