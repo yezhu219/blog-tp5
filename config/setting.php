@@ -6,5 +6,7 @@
  * Time: 16:28
  */
 return [
-    'hsot'=>'http://www.z.cn'
+    'host'=>'http://www.z.cn',
+    'salt'=>'yezhu219',
+    'expire_ind'=>3600
 ];

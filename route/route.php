@@ -19,6 +19,9 @@ Route::post('api/:version/delArticleOne','api/:version.article/delArticleOne');
 Route::post('api/:version/delArticleMany','api/:version.article/delArticleMany');
 
 
+Route::get('api/:version/getToken','api/:version.Token/getToken');
+
+
 
 
 Route::get('api/:version/getClassify','api/:version.tag/getClassify');
@@ -26,6 +29,11 @@ Route::post('api/:version/addClassify','api/:version.tag/addClassify');
 Route::post('api/:version/editeClassify','api/:version.tag/updateClassify');
 Route::post('api/:version/delClassify','api/:version.tag/deleteClassify');
 
+
+
+
+Route::post('api/:version/login','api/:version.login/userLogin');
+Route::post('api/:version/register','api/:version.login/register');
 
 Route::post('api/:version/addUser','api/:version.user/addUser');
 Route::post('api/:version/findUser','api/:version.user/findUser');

@@ -35,6 +35,7 @@ class ArticleList extends Model
         return explode(',',$value);
     }
     public function getDesImgAttr($value) {
+        $con = config('setting.host');
         return config('setting.host').$value;
     }
     public function getAuthorImgAttr($value) {
